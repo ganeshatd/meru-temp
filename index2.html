@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">        
+    </head>
+    <div class="ad-container-300x250">
+        <div class="ad-before-click" id="beforeClick">
+            <div class="image-container">
+                <div class="image">
+                    <img id="ad-img-1" style="object-fit: cover; max-width: 100%; height: 166px;" src=""/>
+                </div>
+            </div>
+            <div class="text-container">
+                <span class="text" id="before_cont_kw">Ad keyword goes here</span>
+                <button class="btn ctr_btn" id="search_now_btn">Search Now</button>
+            </div>    
+        </div>
+
+        <div class="ad-after-click"  id="afterClick">
+            <div class="header-container">
+                <div class="brand-logo">
+                    <img id="brand-logo-img" src=""  style="object-fit: cover; max-width: 100%; height: 40px;" src=""/>
+                </div>
+                <div class="brand-title-container">
+                    <span class="brand-title-text">Visit</span>
+                    <span class="brand-title-url" id="brandUrl">macys.com - Official site</span>
+                </div>
+            </div>
+           <div class="text-container">
+                <span class="main-text" id="after_cont_kw">Ad keyword goes here</span>
+                <span class="mini-text">in</span>
+                <div class="timer-container">
+                    <span>00:0</span><span id="sec_counter">5</span>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn cancel_btn" id="cancel_btn">Cancel</button>
+                <a id="confirm_btn_link" href="" target="_blank" rel="noopener noreferrer"><button class="btn confirm_btn" id="confirm_btn">Go To Page</button></a>                
+            </div>
+        </div>
+        
+        
+    </div>
+</html>
+<style>
+.ad-container-300x250{
+    width: 300px;
+    height: 250px;
+    border:1px solid gray;
+}
+
+.btn{
+    border: none;
+	cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-before-click {
+    width: 100%;
+    height: 100%;
+    padding: 16px 8px 16px 8px;
+    display: block;
+}
+
+.ad-before-click .image-container{
+    width: 284px;
+    height: 166px;
+    border-radius: 4px;
+}
+
+.ad-before-click .text-container{
+    height: 40px;
+    width: 280px;    
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.ad-before-click .text-container .text{
+    width: 190px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #000000;    
+}
+
+.ad-before-click .text-container .ctr_btn{   
+    padding: 12px 8px;
+    gap: 8px;    
+    width: 93px;
+    height: 36px;
+    background: #D83158;
+    border-radius: 6px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;        
+}
+
+
+.ad-after-click{
+    width: 100%;
+    height: 100%;
+    display: none;    
+}
+
+.ad-after-click .header-container{
+    border-bottom: 0.5px solid #E1E1E1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 8px 12px 0px 12px;
+    height: 52px;
+}
+
+.ad-after-click .header-container .brand-logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.ad-after-click .header-container .brand-title-container{
+    height: 40px;    
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+}
+
+.ad-after-click .header-container .brand-title-container .brand-title-text{
+    width: 21px;
+    height: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #666666;
+}
+
+.ad-after-click .header-container .brand-title-container .brand-title-url{
+    width: 166px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;    
+}
+
+.ad-after-click .text-container{
+    margin-top: 14px;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ad-after-click .text-container .mini-text{
+    width: 14px;
+    height: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #666666;
+}
+
+.ad-after-click .text-container  .main-text{
+    width: 276px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    padding: 8px 0px;    
+    background: rgba(245, 245, 245, 0.8);    
+    border-radius: 6px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.ad-after-click .text-container .timer-container{
+    width: 103px;
+    height: 41px;
+    text-align: center;
+}
+
+.ad-after-click .text-container .timer-container span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #D83158;
+}
+
+
+.ad-after-click .button-container{
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+.ad-after-click .button-container .cancel_btn{
+    width: 133px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;    
+} 
+
+.ad-after-click .button-container .confirm_btn{
+    width: 132px;
+    height: 35px;
+    background: #D83158;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.ad-after-click .button-container a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+</style>
+<script>
+    var searchNowButton = document.getElementById('search_now_btn');
+    var cancelButton = document.getElementById('cancel_btn');
+    var confirmButton = document.getElementById('confirm_btn');
+     
+
+    var beforeClickContainer = document.getElementById('beforeClick');
+    var afterClickContainer = document.getElementById('afterClick');
+
+    var adImage1 = document.getElementById('ad-img-1');
+    var brandUrl = document.getElementById('brandUrl');
+    var beforekw = document.getElementById('before_cont_kw');
+    var afterkw = document.getElementById('after_cont_kw');    
+    var goToLink = document.getElementById('confirm_btn_link');
+    var brandLogoImg = document.getElementById('brand-logo-img');
+
+    var impr_url = null;    
+    var redir_url = 'www.nike.com';    
+    var logo_url = 'https://c.static-nike.com/a/images/w_1200,c_limit/bzl2wmsfh7kgdkufrrjq/seo-title.jpg';    
+    var secondCounter = document.getElementById('sec_counter');
+    
+    var x;
+    var i = 5;
+    
+
+    searchNowButton.addEventListener("click", (e) => {
+        beforeClickContainer.style.display = 'none';
+        afterClickContainer.style.display = 'block';
+        brandLogoImg.src = logo_url;
+        
+        const imp_url_img = document.createElement("img");
+        imp_url_img.src = impr_url;
+        imp_url_img.height = '1';
+        imp_url_img.width = '1';
+        document.body.appendChild(imp_url_img);          
+        timer();
+    });
+
+    cancelButton.addEventListener("click", (e) => {
+        clearInterval(x);
+        i = 5;
+        beforeClickContainer.style.display = 'block';
+        afterClickContainer.style.display = 'none';
+    });
+    
+    confirmButton.addEventListener("click", (e) => {
+        console.log("clicked");
+    });
+
+    const timer = (stop) => {
+        x = setInterval(() => {
+            i--;
+            secondCounter.innerHTML = i;
+            if(i <= 0 || stop == true){
+                i = 0;
+                window.open(redir_url, '_blank');
+                clearInterval(x);
+            }
+        }, 1000);
+    }
+    
+    const loadAd = async () =>{
+        console.log("loadAd")
+        const response = await fetch('https://httpbin.org/delay/1');
+        const resp_json = await response.json();
+        const dummy_resp =  {
+            "original_qt": "running sh",
+            "paid_suggestions": [
+                {
+                "term": "Nike.com - Official Site",
+                "click_url": "https://bridge.lga1.admarketplace.net/ct?.....1486&key=1649787195301000020.1", 
+                "image_url": "https://cdn.45tu1c0.com/adgroup...83.png",
+                "impression_url": "https://imp.mt48.net/imp?id=7R7wxEzkiFdwxr3NJGbzfQbYfOkW4tkXfObX4p%2 Fd4Q%2FYfp%2FW1pLd7........vIpkY4pqYfplm1tIoIGwrJr7qGmwqgCfdfpxkfZ8d4OIZ xR2zftIXjFEYsEzkIG7ugG4%2FJmEZ7nckxZkZfCbY4pbafpbnHF4kjFcTGm4WHZk W5QlWftIWjF7KiF2zfClk1pHnj9wWIBdvIpkX",
+                "adv_id": 8654
+                }
+            ]
+        };
+        console.log("z", resp_json);
+        const kw = "must have doll collections";
+        adImage1.src = "https://i.pinimg.com/originals/c5/32/fa/c532fa9b7b90f214fe5ae7473852b649.jpg";
+        goToLink.href= redir_url;
+        brandUrl.innerText = "Nike.com - Official Site";
+        beforekw.innerText = `Search For ${kw}`;
+        afterkw.innerHTML  = kw;
+        impr_url = 'https://imp.mt48.net/imp?id=7R7wxEzkiFdwxr';
+    }
+
+    loadAd();    
+</script>
