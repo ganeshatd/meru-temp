@@ -334,12 +334,12 @@
         // };
         console.log("z", resp_json);
         const kw = "must have doll collections";
-        adImage1.src = "https://i.pinimg.com/originals/c5/32/fa/c532fa9b7b90f214fe5ae7473852b649.jpg";
-        goToLink.href= redir_url;
+        adImage1.src = resp_json[0].paid_suggestions[0].image_url;
+        goToLink.href = resp_json[0].paid_suggestions[0].click_url;
         brandUrl.innerText = `${resp_json[0].paid_suggestions[0].term}`;
         beforekw.innerText = `Search For ${resp_json[0].original_qt}`;
         afterkw.innerHTML  = kw;
-        impr_url = resp_json.image_url;
+        impr_url = resp_json[0].paid_suggestions[0].impression_url;
     }
 
     loadAd();    

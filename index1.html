@@ -286,12 +286,12 @@
         // };
         console.log("z", resp_json);
         const kw = "must have doll collections";
-        adImage1.src = "https://i.pinimg.com/originals/c5/32/fa/c532fa9b7b90f214fe5ae7473852b649.jpg";
+        adImage1.src = resp_json[0].paid_suggestions[0].image_url;
         brandUrl.innerText = "Nike.com - Official Site";
         beforekw.innerText = `Search For ${kw}`;
-        goToLink.href = redir_url;
+        goToLink.href = resp_json[0].paid_suggestions[0].click_url;
         afterkw.innerHTML  = kw;
-        impr_url = resp_json.image_url;
+        impr_url = resp_json[0].paid_suggestions[0].impression_url;
     }
 
     loadAd();
